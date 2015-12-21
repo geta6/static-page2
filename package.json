@@ -20,14 +20,8 @@
     "axios": "^0.8.1",
     "babel-core": "^5.8.34",
     "domready": "^1.0.8",
-    "fbjs": "^0.5.1",
-    "fluxible": "^1.0.3",
-    "fluxible-addons-react": "^0.2.2",
-    "fluxible-router": "^0.4.1",
-    "immutable": "^3.7.5",
-    "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "babel": "^5.8.34",

@@ -1,17 +1,25 @@
 import 'babel-core/polyfill';
-import ReactDOM from 'react-dom';
-import Fluxible from 'fluxible';
-import { createElementWithContext } from 'fluxible-addons-react';
+import './index.styl';
+import $ from 'jquery';
+import image from './image.png';
 
-// create app
-const app = new Fluxible({
-  component: require('./components/ApplicationComponent'),
-  stores: [
-    require('./stores/StateStore'),
-    require('./stores/RouteStore'),
-  ],
-});
+const routes = {
+  '/': () => {
+    alert('index');
+  },
 
-app.rehydrate({}, (err, context) => {
-  ReactDOM.render(createElementWithContext(context), document.getElementById('app'));
+  '/info': () => {
+    console.log('いんふぉ');
+  },
+};
+
+const routing = () => {
+  const hash = location.hash.replace(/^\#\!/, '') || '/';
+  routes[hash] && routes[hash]();
+};
+
+$(window).on('hashchange', routing);
+
+$(() => {
+  routing();
 });

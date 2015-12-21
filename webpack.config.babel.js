@@ -44,9 +44,10 @@ const config = {
 
   module: {
     loaders: [
+      { test: /\.(?:jpg|png)$/, loaders: ['file'] },
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
       { test: /\.json$/, loaders: ['json'] },
-      { test: /\.styl$/, loaders: ['style/useable', 'css', 'stylus'] },
+      { test: /\.styl$/, loaders: ['style', 'css', 'stylus'] },
     ],
   },
 };
