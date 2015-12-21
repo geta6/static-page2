@@ -22,26 +22,12 @@ let IndexComponent = React.createClass({
     style.unuse();
   },
 
-  handleOn() {
-    this.context.executeAction(StateAction, {
-      type: StateAction.actionTypes.setState,
-      entity: { state: { example_state: true } },
-    });
-  },
-
-  handleOff() {
-    this.context.executeAction(StateAction, {
-      type: StateAction.actionTypes.setState,
-      entity: { state: { example_state: false } },
-    });
-  },
-
   render() {
     return (
       <div id="IndexComponent">
         <span>current status is {this.props.state.example_state ? 'on' : 'off'}</span>
-        <button onClick={this.handleOn}>ON</button>
-        <button onClick={this.handleOff}>OFF</button>
+        <div id="IndexComponentButton1" className="button">01 - ちんちん</div>
+        <div id="IndexComponentButton2" className="button">02 - かもかも</div>
       </div>
     );
   },

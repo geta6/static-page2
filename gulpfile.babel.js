@@ -1,3 +1,4 @@
+import cp from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import gulp from 'gulp';
@@ -116,6 +117,8 @@ gulp.task('start', async () => {
   const config = require('./webpack.config.babel')[0];
   const bundler = webpack(config);
 
+  cp.spawn('node', ['./src/server.js']);
+
   await new Promise(resolve => run('build', resolve));
 
   browser.init({
@@ -123,8 +126,8 @@ gulp.task('start', async () => {
     notify: false,
     ghostMode: false,
 
-    server: {
-      baseDir: './build',
+    proxy: {
+      target: 'localhost:3000',
       middleware: [
         webpackDevMiddleware(bundler, { publicPath: config.output.publicPath, stats: config.stats }),
         webpackHotMiddleware(bundler),
