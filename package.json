@@ -26,13 +26,8 @@
     "fluxible-router": "^0.4.1",
     "immutable": "^3.7.5",
     "lodash": "^3.10.1",
-    "moment": "^2.10.6",
     "react": "^0.14.3",
-    "react-addons-css-transition-group": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-immutable-proptypes": "^1.5.0",
-    "style-loader": "^0.13.0",
-    "velocity-animate": "^1.2.3"
+    "react-dom": "^0.14.3"
   },
   "devDependencies": {
     "babel": "^5.8.34",
