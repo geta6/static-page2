@@ -1,0 +1,16 @@
+# Ignore tempfiles.
+/tmp
+/build
+/release
+
+# Ignore modules.
+node_modules
+
+# Ignore npm garbages.
+npm-debug.log
+
+# Ignore system files.
+.DS_Store
+*.sw*
+.settings
+

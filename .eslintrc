@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "no-new": 0,
+    "no-console": 0,
+    "no-else-return": 0,
+    "no-loop-func": 0,
+    "no-unused-expressions": 0,
+    "react/display-name": 1,
+    "react/jsx-boolean-value": 0,
+    "no-warning-comments": [1, {"terms": ["todo", "fixme"], "location": "anywhere"}]
+  },
+  "globals": {
+    "__DEV__": true
+  }
+}
