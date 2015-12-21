@@ -6,4 +6,9 @@ export default RouteStore.withStaticRoutes({
     method: 'get',
     handler: require('../components/IndexComponent'),
   },
+  info: {
+    path: '/information',
+    method: 'get',
+    handler: require('../components/InfoComponent'),
+  },
 });
