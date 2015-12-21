@@ -1,8 +1,8 @@
 {
-  "name": "SketchLight",
+  "name": "staticpage2",
   "version": "0.0.4",
   "private": true,
-  "description": "Desktop application for pixiv Sketch",
+  "description": "static page 2",
   "main": "src/main/index.js",
   "engines": {
     "node": ">=4.2 <5.0"
