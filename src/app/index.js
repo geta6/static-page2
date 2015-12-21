@@ -3,12 +3,16 @@ import './index.styl';
 import $ from 'jquery';
 import image from './image.png';
 
+const expand = (expr) => {
+  $(expr).addClass('expand');
+};
+
 const routes = {
   '/': () => {
-    alert('index');
   },
 
   '/info': () => {
+    expand('.menu1 .image');
     console.log('いんふぉ');
   },
 };
@@ -22,4 +26,7 @@ $(window).on('hashchange', routing);
 
 $(() => {
   routing();
+  $('.menu').each(function menu() {
+    $(this).find('.image').css({'background-image': `url(${image})`});
+  });
 });
